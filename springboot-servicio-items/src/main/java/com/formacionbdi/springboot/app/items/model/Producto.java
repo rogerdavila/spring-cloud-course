@@ -1,33 +1,17 @@
-package com.formacionbdi.springboot.app.productos.model.entity;
+package com.formacionbdi.springboot.app.items.model;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
+public class Producto {
 
-@Entity
-@Table(name = "productos")
-public class Producto implements Serializable{
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nombre;
 	
 	private Double precio;
 	
-	@Temporal(TemporalType.DATE)
 	private Date fechaCreacion;
 	
-	@Transient
 	private Integer port;
 
 	public Long getId() {
@@ -61,7 +45,7 @@ public class Producto implements Serializable{
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
-	
+
 	public Integer getPort() {
 		return port;
 	}
@@ -69,8 +53,5 @@ public class Producto implements Serializable{
 	public void setPort(Integer port) {
 		this.port = port;
 	}
-
-
-
-	private static final long serialVersionUID = 5392343347344631988L;
+	
 }
