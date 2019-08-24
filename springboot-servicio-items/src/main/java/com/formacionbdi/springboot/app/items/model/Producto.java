@@ -12,7 +12,7 @@ public class Producto {
 	
 	private Date fechaCreacion;
 	
-	private Integer port;
+	private String port;
 
 	public Long getId() {
 		return id;
@@ -46,11 +46,11 @@ public class Producto {
 		this.fechaCreacion = fechaCreacion;
 	}
 
-	public Integer getPort() {
+	public String getPort() {
 		return port;
 	}
 
-	public void setPort(Integer port) {
+	public void setPort(String port) {
 		this.port = port;
 	}
 	

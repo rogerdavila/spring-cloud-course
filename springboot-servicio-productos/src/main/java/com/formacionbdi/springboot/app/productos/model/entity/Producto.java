@@ -28,7 +28,7 @@ public class Producto implements Serializable{
 	private Date fechaCreacion;
 	
 	@Transient
-	private Integer port;
+	private String port;
 
 	public Long getId() {
 		return id;
@@ -62,11 +62,11 @@ public class Producto implements Serializable{
 		this.fechaCreacion = fechaCreacion;
 	}
 	
-	public Integer getPort() {
+	public String getPort() {
 		return port;
 	}
 
-	public void setPort(Integer port) {
+	public void setPort(String port) {
 		this.port = port;
 	}
 

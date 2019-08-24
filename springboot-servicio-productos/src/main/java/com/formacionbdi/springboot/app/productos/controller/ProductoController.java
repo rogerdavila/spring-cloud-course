@@ -20,8 +20,8 @@ public class ProductoController {
 	@Autowired
 	private IProductoService productoService;
 	
-	@Value("${server.port}")
-	private Integer port;
+	@Value("${eureka.instance.instance-id}")
+	private String port;
 	
 	@Autowired
 	private Environment env;
