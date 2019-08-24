@@ -36,10 +36,11 @@ public class ProductoController {
 	}
 	
 	@GetMapping("/ver/{id}")
-	public ResponseEntity<Producto> detalle (@PathVariable Long id) {
+	public ResponseEntity<Producto> detalle (@PathVariable Long id) throws Exception{
 		Producto producto = productoService.findById(id);
 		// producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
 		producto.setPort(port);
+		
 		return ResponseEntity.ok(producto);
 	}
 }
