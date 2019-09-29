@@ -35,6 +35,8 @@ public class ProductoController {
 		Producto producto = productoService.findById(id);
 		producto.setPort(port);
 		
+		Thread.sleep(20000L);
+		
 		return ResponseEntity.ok(producto);
 	}
 }
